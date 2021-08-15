@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 
 import { CreateStudentComponent } from './students/create-student/create-student.component';
 import { StudentsListComponent } from './students/students-list/students-list.component';
+import { UserComponent } from './users/user.component';
+
+import { UserService } from './users/types/user.service';
 //Material Imports
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
@@ -16,8 +19,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+//Backend Related
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
-  declarations: [AppComponent, CreateStudentComponent, StudentsListComponent],
+  declarations: [
+    AppComponent,
+    CreateStudentComponent,
+    StudentsListComponent,
+    UserComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,6 +40,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatToolbarModule,
     BrowserAnimationsModule,
     CommonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
